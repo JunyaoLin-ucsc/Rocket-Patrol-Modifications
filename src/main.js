@@ -1,3 +1,9 @@
+// Name: Junyao Lin
+// Modification's Title: Rocket Patrol: TBD
+// Apprixomate Time: 12 hours
+// Mods I chose: Display the time remaining (in seconds) on the screen, Allow the player to control the Rocket after it's fired, TBD
+// Citations: 
+
 let config = {
     type: Phaser.AUTO,
     width: 640,

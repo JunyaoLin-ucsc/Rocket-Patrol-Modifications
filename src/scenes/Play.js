@@ -31,10 +31,31 @@ class Play extends Phaser.Scene {
             },
             fixedWidth: 100
         }
+        let timerConfig = {
+            fontFamily: 'Courier',
+            fontSize: '28px',
+            backgroundColor: '#F3B141',
+            color: '#843605',
+            align: 'right',
+            padding : {
+                top: 5,
+                bottom: 5
+            },
+            fixedWidth: 80
+        };
+        let finalTimer = (game.settings && game.settings.gameTimer) ? game.settings.gameTimer : 60000;
+        this.timeleft = finalTimer / 1000;
+
+        this.timerText = this.add.text(
+            game.config.width - borderUISize - borderPadding - 80,
+            borderUISize + borderPadding * 2,
+            this.timeleft,
+            timerConfig
+        );
         this.scoreLeft = this.add.text(borderUISize + borderPadding, borderUISize + borderPadding * 2, this.p1Score, scoreConfig)
         this.gameOver = false
         scoreConfig.fixedWidth = 0
-        this.clock = this.time.delayedCall(60000, () => {
+        this.clock = this.time.delayedCall(finalTimer, () => {
             this.add.text(game.config.width/2, game.config.height/2, 'GAME OVER', scoreConfig).setOrigin(0.5)
             this.add.text(game.config.width/2, game.config.height/2 + 64, 'Press (R) to Restart or ← to Main Menu', scoreConfig).setOrigin(0.5)
             this.gameOver = true
@@ -51,6 +72,8 @@ class Play extends Phaser.Scene {
             this.ship01.update()
             this.ship02.update()
             this.ship03.update()
+            let timeRemaining = Math.ceil(this.clock.getRemainingSeconds());
+            this.timerText.text = timeRemaining;
         }
 
         if(this.checkCollision(this.p1Rocket, this.ship03)) {
