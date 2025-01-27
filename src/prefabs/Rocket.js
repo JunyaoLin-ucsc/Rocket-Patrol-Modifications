@@ -27,6 +27,12 @@ class Rocket extends Phaser.GameObjects.Sprite {
         if(this.y <= borderUISize * 3 + borderPadding) {
             this.isFiring = false
             this.y = game.config.height - borderUISize - borderPadding
+            if (!this.scene.gameOver) {
+                this.scene.clock.delay -= 2000
+                if (this.scene.clock.delay <= this.scene.clock.elapsed) {
+                    this.scene.clock.callback()
+                }
+            }
         }
     }
 

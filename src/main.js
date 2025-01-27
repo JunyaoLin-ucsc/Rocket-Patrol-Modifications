@@ -4,8 +4,10 @@
 // Mods I chose: Display the time remaining (in seconds) on the screen (3), Allow the player to control the Rocket after it's fired (1),
 // Continued: Randomize each spaceship's movement direction at the start of each play(Also spaceship movement will randomly choose in the game of each movement) (1)
 // Continued: Implement mouse cotrol for player movement and left mouse click to fire (5)
+// Continued: Implement a new timing/scoring mechanism that adds time to the clock for successful hits and subtracts time for misses (5), adding 3 seconds when successful hits and subtract 2 seconds when misses.
 // Continued: 
 // Citations: 
+
 
 let config = {
     type: Phaser.AUTO,
