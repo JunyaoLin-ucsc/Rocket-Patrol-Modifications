@@ -5,7 +5,7 @@
 // Continued: Randomize each spaceship's movement direction at the start of each play(Also spaceship movement will randomly choose in the game of each movement) (1)
 // Continued: Implement mouse cotrol for player movement and left mouse click to fire (5)
 // Continued: Implement a new timing/scoring mechanism that adds time to the clock for successful hits and subtracts time for misses (5), adding 3 seconds when successful hits and subtract 2 seconds when misses.
-// Continued: 
+// Continued: Create a new enemy Spaceship(totally new art work), that's smaller, faster and worth more points (up to 50 points) (5)
 // Citations: 
 
 
