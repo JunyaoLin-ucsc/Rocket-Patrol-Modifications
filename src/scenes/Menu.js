@@ -26,7 +26,7 @@ class Menu extends Phaser.Scene {
             fixedWidth: 0
         }
         this.add.text(game.config.width/2, game.config.height/2 - borderUISize - borderPadding, 'ROCKET PATROL', menuConfig).setOrigin(0.5)
-        this.add.text(game.config.width/2, game.config.height/2, 'Mouse Pointer to Move, Left Click to Fire', menuConfig).setOrigin(0.5)
+        this.add.text(game.config.width/2, game.config.height/2, 'Mouse Pointer to Move Left Click to Fire', menuConfig).setOrigin(0.5)
         menuConfig.backgroundColor = '#00FF00'
         menuConfig.color = '#000'
         this.add.text(game.config.width/2, game.config.height/2 + borderUISize + borderPadding, 'Press ← for Novice or → for Expert', menuConfig).setOrigin(0.5)
